@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.chess-board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  width: 700px;
+  height: 700px;
+  border: 1px solid #000;
+  transition: all 1s ease-in-out;
+}
+.chess-board.white {
+  transform: rotate(0deg);
+}
+.chess-board.black {
+  transform: rotate(180deg);
+}
+.chess-board.white img {
+  transform: rotate(0deg);
+}
+.chess-board.black img {
+  transform: rotate(180deg);
+}
+.square {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0;
+  font-size: 2em;
+}
+.square.black {
+  background-color: #419e4e;
+}
+.square.white {
+  background-color: #ffffff;
+}
+img {
+  width: 80%;
+  height: 80%;
+  transition: all 0.5s ease-in-out;
+}
+.square.selected {
+  background: radial-gradient(transparent, #4b78d180, #4b78d1c8, #4b78d1);
+}
+.square.white.posible.move {
+  background: radial-gradient(transparent, #91cac880, #91cac8c8, #91cac8);
+}
+.square.black.posible.move {
+  background: #66aabd;
+}
+.square.white.posible.attack {
+  background: radial-gradient(transparent, #f7a8a853, #f7a8a8c8, #f7a8a8);
+  box-shadow: 0 0 10px 2px #f7a8a8;
+  z-index: 1;
+}
+.square.black.posible.attack {
+  background: radial-gradient(transparent, #eb858553, #eb8585c8, #eb8585);
+  box-shadow: 0 0 10px 2px #f7a8a8;
+  z-index: 1;
+}
