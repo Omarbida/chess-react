@@ -1,4 +1,4 @@
-import React, { createContext, useCallback, useState } from 'react'
+import React, { createContext, useCallback, useEffect, useState } from 'react'
 
 export const BoardContext = createContext({
   board: [],
@@ -123,6 +123,7 @@ export const BoardProvider = ({ children }) => {
     },
     [board, posibleMoves, selectMove, selectedSquare, turn],
   )
+
   const checkPosibleMoves = useCallback(
     (x, y, piece, player) => {
       let moves = []

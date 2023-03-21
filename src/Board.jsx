@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Square from './Square'
 import useBoard from './useBoard'
+
 function Board() {
   const boardContext = useBoard()
   const [boardclasses, setBoardClasses] = useState('chess-board white')
